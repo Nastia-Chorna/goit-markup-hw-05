@@ -480,6 +480,7 @@ padding-bottom: 94px;
 }
 }
 
+
 .main-pic{
 position: relative;
 }
@@ -989,22 +990,28 @@ color: #FFFFFF;
 
 }
 
+.techno:hover .techno-text{
+  opacity: 90%;
+}
+
 .techno{
   position: relative;
 }
 
-.techno-text{
+.techno-text:hover{
   position: absolute;
   width: 370px;
   height: 294px;
   background-color: #2196F3;
-  opacity: 90%;
+  opacity: 0;
   top: 0;
   left: 0;
+  transition: 250ms;
+}
 }
 
 
-.techno-text h6{
+.techno-text h6:hover{
 font-family: Roboto;
 font-style: normal;
 font-weight: normal;
