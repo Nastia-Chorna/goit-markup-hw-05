@@ -39,14 +39,22 @@ margin-top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #000000;
-  opacity: 20%;
+  background-color: rgba(0, 0, 0, 0.2);;
+  opacity: 1;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.backdrop .is-hidden{
+.backdrop.is-hidden{
 opacity: 0;
 pointer-events: none;
 visibility: hidden;
+}
+
+.close{
+  fill: black;
+  stroke: 1px;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
 }
 .modal{
   position: absolute;
@@ -82,6 +90,9 @@ transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 .modal-button:focus{
   fill: #2196F3;
 }
+
+
+
 .box {
   width: 1200px;
   margin-left: auto;
@@ -104,6 +115,8 @@ font-style: normal;
 font-weight: 500;
 font-size: 14px;
 line-height: 1.1;
+transition-duration: 250ms;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
@@ -225,6 +238,8 @@ border: transparent;
 border-radius: 4px;
 font-family: Roboto;
 font-weight: 500;
+transition-duration: 250ms;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-one:hover,
@@ -311,8 +326,8 @@ width: 294px;
   display: flex;
   justify-content: space-between;
   margin-right: 30px;
-  
 }
+
 .navlist > .header-link:not(:last-child) {
   margin-right: 50px;
 }
@@ -681,6 +696,10 @@ align-items: center;
 
 fill: #AFB1B8;
 background-color:transparent;
+transition-property: fill;
+transition-duration: 250ms;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .change-insta:hover,
@@ -832,6 +851,9 @@ padding: 0;
   margin-right: auto;
   display: block;
   text-align: center;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .change-company:hover,
@@ -1031,9 +1053,9 @@ font-style: normal;
 size: 14px;
 line-height: 1.7px;
 color: #FFFFFF;
+margin-bottom: 9px;
 
 }
-
 
 
 .adress-divide {
