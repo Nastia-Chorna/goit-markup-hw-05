@@ -115,6 +115,7 @@ font-style: normal;
 font-weight: 500;
 font-size: 14px;
 line-height: 1.1;
+transition-property: color;
 transition-duration: 250ms;
 transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -157,6 +158,7 @@ width: 16px;
 height: 12px;
 fill: #757575;
 margin-right: 10px;
+fill: currentColor;
 }
 
 .icon-contact:hover{
@@ -169,6 +171,7 @@ margin-right: 10px;
   height: 16px;
   fill: #757575; 
   margin-right: 10px;
+  fill: currentColor;
 }
 .our-contacts{
   display: flex;
@@ -239,6 +242,8 @@ border-radius: 4px;
 font-family: Roboto;
 font-weight: 500;
 transition-duration: 250ms;
+box-shadow: color;
+transition-property: background-color, color, box-shadow;
 transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -260,7 +265,7 @@ a {
   text-decoration: none;
   color: inherit;
 }
-}
+
 .darkFontSecond {
   background-color: #2f303a;
   width: 1600px;
@@ -270,7 +275,7 @@ a {
 }
 /*section {
   background: #e5e5e5;*/
-}
+
 .page {
   border: 1px solid black;
 }
@@ -338,50 +343,42 @@ width: 294px;
 }
 
 .options .link{
-  color: #2196F3;
   text-decoration: none;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.2;
-  transition-property: #2196F3;
+  transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.options .link:hover,
-.options .link:focus{
+.options:hover,
+.options:focus{
 color: #2196F3;
-text-decoration: none;
 }
-
 .link-current{
   color: #2196F3;
   position: relative;
-  display: block;
-  text-decoration: none;
 }
 
 .link-current::after{
+  display: block;
   content: "";
   position: absolute;
   left: 0;
   bottom: 0;
   top: 45px;
-
   display: block;
   width: 100%;
   height: 4px;
   background-color: #2196F3;
-
   opacity: 0;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .link-current::after{
   opacity: 1;
   border-radius: 2px;
-}
 
+}
 .options {
   display: flex;
   /*margin-top: 32px;
@@ -400,7 +397,7 @@ text-decoration: none;
   display: block;
   position: relative;
   text-decoration: none;
-  color: ;
+
 }
 
 .buttons {
@@ -604,6 +601,9 @@ height: 70px;
 background-color: #2F303A;
 opacity: 80%;
 bottom: 0;
+display: flex;
+align-items: center;
+justify-content: center;
 }
 
 .small-pic h6{
@@ -612,13 +612,13 @@ bottom: 0;
   font-weight: 700;
   font-style: normal;
   font-size: 14px;
-  line-height: 1.14px;
+  line-height: 1.14;
 color: #FFFFFF;
 text-transform: uppercase;
 margin-left: auto;
 margin-right: auto;
-display: block;
-margin-top: 30px;
+margin: 0;
+padding: 0;
  
 }
 
@@ -696,7 +696,7 @@ align-items: center;
 
 fill: #AFB1B8;
 background-color:transparent;
-transition-property: fill;
+transition-property: fill, background-color;
 transition-duration: 250ms;
 transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -764,6 +764,7 @@ background-color: rgba(255, 255, 255, 0.1);
 display: flex;
 border-radius: 50px;
 justify-content: center;
+transition-property:background-color;
 align-items: center;}
 
 
@@ -851,7 +852,7 @@ padding: 0;
   margin-right: auto;
   display: block;
   text-align: center;
-  transition-property: fill;
+  transition-property: fill, border-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -1190,6 +1191,7 @@ line-height: 1.56;
 
 .thumb{
   text-decoration: none;
+  display: block;
 }
 
 .thumb:hover .proj-overlay{
@@ -1208,8 +1210,8 @@ line-height: 1.56;
   1px 4px 6px rgb(0 0 0 / 16%);
 }
 
-.last-pics:hover,
-.last-pics:focus{
+.thumb:hover,
+.thumb:focus{
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
